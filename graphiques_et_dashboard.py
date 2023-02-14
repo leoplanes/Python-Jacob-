@@ -1,4 +1,4 @@
-from app import *
+from traitement_donnees import *
 import pandas as pd
 import plotly.express as px
 import numpy as np
