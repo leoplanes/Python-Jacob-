@@ -1,0 +1,24 @@
+import pandas as pd
+import matplotlib as plt
+import numpy as np
+import os
+# sert à importer les bibliothèques et à les renommer si on veut 
+# la bibliothèques OS 
+
+CUR_DIR = os.path.dirname(__file__)
+#définit le dossier courant qui est : d:\Utilisateurs\Léo\Bureau\M2 MSI\Cours python - Jacob\VSC python
+
+DogLicense = os.path.join(CUR_DIR, "Datasets", "NYC_Dog_Licensing_Dataset.csv")
+DogLicenseCSV = pd.read_csv(DogLicense, sep=";")
+print(DogLicenseCSV.head())
+print(DogLicenseCSV.columns)
+print(DogLicenseCSV)
+print (DogLicenseCSV.tail())
+
+#permet de supprimer les cellules vides dans tableau 
+N = DogLicenseCSV["AnimalBirthMonth"].dropna()
+print(N)
+
+DogBite = os.path.join(CUR_DIR, "Datasets", "DOHMH_Dog_Bite_Data.csv")
+DogBiteCSV = pd.read_csv(DogBite, sep=";")
+print(DogBiteCSV.head())
